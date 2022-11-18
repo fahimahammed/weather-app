@@ -83,9 +83,8 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String?): String? {
             var response:String?
             try{
-                response = URL("https://api.openweathermap.org/data/2.5/weather?lat=$late&lon=$longe&appid=$API").readText(
-                    Charsets.UTF_8
-                )
+                response = URL("https://api.openweathermap.org/data/2.5/weather?lat=$late&lon=$longe&appid=$API")
+                    .readText(Charsets.UTF_8)
             }catch (e: Exception){
                 response = null
             }
